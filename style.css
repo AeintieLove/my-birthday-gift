@@ -110,3 +110,17 @@ button:hover {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(-120vh) rotate(20deg); opacity: 0; }
 }
+
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#musicBtn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background: rgba(255, 77, 109, 0.8);
+    border-radius: 20px;
+}
