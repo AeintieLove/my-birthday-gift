@@ -1,0 +1,112 @@
+body {
+    background-color: #fff0f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ff4d6d;
+    margin-top: 50px;
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.photo-grid img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+.message-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #c9184a;
+}
+
+.hidden { display: none; }
+#hiddenHeart {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #ff4d6d;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#balloon-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background-color: #ff4d6d;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    animation: floatUp 10s linear infinite;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 24px;
+    width: 2px;
+    height: 15px;
+    background: #d3d3d3;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(20deg); opacity: 0; }
+}
