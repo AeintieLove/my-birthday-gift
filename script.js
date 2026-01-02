@@ -54,3 +54,30 @@ function createBalloon() {
 
 setInterval(createBalloon, 500);
 
+const audio = document.getElementById("myAudio");
+
+document.getElementById('surpriseBtn').addEventListener('click', function() {
+
+    const heart = document.getElementById('hiddenHeart');
+    heart.classList.toggle('hidden');
+    
+    if (audio.paused) {
+        audio.play();
+        this.innerHTML = "Enjoy the Music! ❤️";
+    } else {
+        audio.pause();
+        this.innerHTML = "Click for a Surprise! ✨";
+    }
+});
+
+
+function toggleMusic() {
+    if (audio.paused) {
+        audio.play();
+        document.getElementById("musicBtn").innerHTML = "⏸ Pause Music";
+    } else {
+        audio.pause();
+        document.getElementById("musicBtn").innerHTML = "🎵 Play Music";
+    }
+}
+
