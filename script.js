@@ -1,11 +1,4 @@
-document.getElementById('surpriseBtn').addEventListener('click', function() {
-    const heart = document.getElementById('hiddenHeart');
-    heart.classList.toggle('hidden');
-    
-    
-    alert("I Love You So Much! ❤️");
-});
-
+//countdown timer
 const birthday = new Date(2026, 0, 4).getTime(); 
 
 const countdown = setInterval(function() {
@@ -30,6 +23,7 @@ const countdown = setInterval(function() {
     }
 }, 1000);
 
+//balloon
 function createBalloon() {
     const container = document.getElementById('balloon-container');
     const balloon = document.createElement('div');
@@ -54,22 +48,38 @@ function createBalloon() {
 
 setInterval(createBalloon, 500);
 
+
+//video
 const audio = document.getElementById("myAudio");
+const video = document.getElementById("myVideo");
+const surpriseBtn = document.getElementById('surpriseBtn');
 
-document.getElementById('surpriseBtn').addEventListener('click', function() {
-
+surpriseBtn.addEventListener('click', function() {
     const heart = document.getElementById('hiddenHeart');
-    heart.classList.toggle('hidden');
+        alert("I love you so much!!");
+    heart.classList.remove('hidden'); 
     
-    if (audio.paused) {
-        audio.play();
-        this.innerHTML = "Enjoy the Music! ❤️";
-    } else {
-        audio.pause();
-        this.innerHTML = "Click for a Surprise! ✨";
+    if (audio) {
+        audio.pause(); 
     }
+
+    if (video) {
+        video.currentTime = 0; 
+        video.play().catch(error => console.log("Video Play Error:", error));
+    }
+
+
+    this.style.display = 'none'; 
 });
 
+if (video) {
+    video.onended = function() {
+        if (audio) {
+            audio.play();
+            document.getElementById("musicBtn").innerHTML = "⏸ Pause Music";
+        }
+    };
+}
 
 function toggleMusic() {
     if (audio.paused) {
@@ -80,4 +90,3 @@ function toggleMusic() {
         document.getElementById("musicBtn").innerHTML = "🎵 Play Music";
     }
 }
-
