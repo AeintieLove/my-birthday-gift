@@ -61,6 +61,20 @@ button:hover {
     background-color: #c9184a;
 }
 
+.hidden { display: none; }
+#hiddenHeart {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #ff4d6d;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 #balloon-container {
     position: fixed;
     top: 0;
@@ -111,40 +125,35 @@ button:hover {
     border-radius: 20px;
 }
 
-.hidden { 
-    display: none; 
+.hidden {
+    display: none;
 }
 
 #hiddenHeart {
     margin-top: 20px;
-    animation: none !important; 
+    animation: none;
     transform: none !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
+
 .love-text {
     color: #ff4d6d;
     font-size: 2rem;
     margin: 30px 0;
     font-weight: bold;
     display: inline-block; 
-    animation: textBounce 1.5s infinite ease-in-out; 
-}
+  animation: none;
+    transform: none !important;}
 
-@keyframes textBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
+
 .video-container {
     max-width: 500px;
-    margin: 0 auto 50px auto;
+    margin: 20px auto 50px auto;
     border: 5px solid white;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
     transform: none !important; 
-    animation: none !important;
+    animation: none !important; 
 }
 
 #myVideo {
