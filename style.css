@@ -137,7 +137,7 @@ button:hover {
     animation: pulseText 1.2s infinite;
 }
 
-@kwyframes pulseText{
+@keyframes pulseText{
     0% { transform: scale(1);}
     50% { transform: scale(1.1);}
     100% { transform: scale(1);}
