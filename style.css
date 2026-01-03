@@ -124,3 +124,41 @@ button:hover {
     background: rgba(255, 77, 109, 0.8);
     border-radius: 20px;
 }
+
+.hidden {
+    display: none;
+}
+
+#hiddenHeart {
+    margin-top: 20px;
+    animation: none;
+    transform: none !important;
+}
+
+.love-text {
+    color: #ff4d6d;
+    font-size: 2rem;
+    margin: 30px 0;
+    font-weight: bold;
+    display: inline-block; 
+  animation: none;
+    transform: none !important;}
+
+
+.video-container {
+    max-width: 500px;
+    margin: 20px auto 50px auto;
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transform: none !important; 
+    animation: none !important; 
+}
+
+#myVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
