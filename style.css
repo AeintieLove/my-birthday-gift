@@ -124,7 +124,7 @@ button:hover {
     align-items: center;
 }
 
-.love-text {
+#hiddenHeart .love-text {
     color: #ff4d6d;
     font-size: 2rem;
     margin: 30px 0;
@@ -138,7 +138,7 @@ button:hover {
     50% { transform: translateY(-10px); }
 }
 
-.video-container {
+#hiddenHeart .video-container {
     max-width: 500px;
     margin: 0 auto 50px auto;
     border: 5px solid white;
