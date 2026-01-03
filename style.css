@@ -133,25 +133,23 @@ button:hover {
     font-size: 2rem;
     margin: 30px 0;
     font-weight: bold;
-    display: inline-block; 
-    animation: pulseText 1.2s infinite;
+    display: block; 
+    animation: bounceText 1.5s infinite; 
 }
 
-@keyframes pulseText{
-    0% { transform: scale(1);}
-    50% { transform: scale(1.1);}
-    100% { transform: scale(1);}
+@keyframes bounceText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .video-container {
     max-width: 500px;
-    margin: 20px auto 50px auto;
+    margin: 0 auto 50px auto;
     border: 5px solid white;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
     transform: none !important; 
-    animation: none !important; 
 }
 
 #myVideo {
@@ -159,4 +157,3 @@ button:hover {
     height: auto;
     display: block;
 }
-
